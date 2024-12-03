@@ -1,0 +1,87 @@
+/* Overall container */
+.city-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #1e465b;
+  }
+  
+  /* Input field styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #33a7c4;
+    outline: none;
+  }
+  
+  /* Button styling */
+  .add-city-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background: #1e465b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+  }
+  
+  .add-city-button:hover {
+    background: #145064;
+  }
+  
+  /* Dropdown styling */
+  .city-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .city-dropdown:focus {
+    border-color: #33a7c4;
+    outline: none;
+  }
+  
+  /* Selected city text */
+  .selected-city {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .selected-city span {
+    font-weight: bold;
+    color: #1e465b;
+  }
+  

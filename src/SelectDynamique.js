@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-function CitySelect() {
- /*const [selectedCity, setSelectedCity] = useState('');
+/*function CitySelect() {
+ const [selectedCity, setSelectedCity] = useState('');
  const [cities, setCities] = useState(['Paris', 'London', 'New York']);
  const handleCityChange = (e) => {
  setSelectedCity(e.target.value);
@@ -24,32 +24,65 @@ function CitySelect() {
  );
 }
 export default CitySelect;*/
-const [selectedCity, setSelectedCity] = useState('');
- const [cities, setCities] = useState(['Paris', 'London', 'New York']);
- const [ville,setVille]=useState('');
- const handleCityChange = (e) => {
- setSelectedCity(e.target.value);
- };
 
- const addCity = () => {
- setCities([...cities, ville]); // Ajout d'une ville dans le tableau'
- };
+import './CitySelect.css'; 
 
- return (
- <div>
- entrer une ville :<
-input type='text' value={ville} onChange={(e)=>setVille(e.target.value)}/>
- <button onClick={addCity}>Add city</button>
- <select value={selectedCity} onChange={handleCityChange}>
- {cities.map((city, index) => (
- <option key={index} value={city}>
- {city}
- </option>
- ))}
- </select>
- <p>Selected City: {selectedCity}</p>
- </div>
- );
+function CitySelect() {
+  const [selectedCity, setSelectedCity] = useState('');
+  const [cities, setCities] = useState(['Paris', 'London', 'New York']);
+  const [ville, setVille] = useState('');
 
+  const handleCityChange = (e) => {
+    setSelectedCity(e.target.value);
+  };
 
-}export default CitySelect;
+  const addCity = () => {
+    if (ville.trim()) {
+      setCities([...cities, ville.trim()]);
+      setVille(''); // Clear the input after adding
+    }
+  };
+
+  return (
+    <div className="city-select-container">
+      <div className="form-group">
+        <label htmlFor="city-input">Enter a city:</label>
+        <input
+          type="text"
+          id="city-input"
+          value={ville}
+          onChange={(e) => setVille(e.target.value)}
+          placeholder="Type a city name"
+        />
+        <button onClick={addCity} className="add-city-button">
+          Add City
+        </button>
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="city-select">Select a city:</label>
+        <select
+          id="city-select"
+          value={selectedCity}
+          onChange={handleCityChange}
+          className="city-dropdown"
+        >
+          <option value="" disabled>
+            -- Choose a city --
+          </option>
+          {cities.map((city, index) => (
+            <option key={index} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <p className="selected-city">
+        Selected City: <span>{selectedCity || 'None'}</span>
+      </p>
+    </div>
+  );
+}
+
+export default CitySelect;

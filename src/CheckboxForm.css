@@ -1,0 +1,89 @@
+/* Overall form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    height: fit-content;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Form styling */
+  .checkbox-form {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .checkbox-form h3 {
+    color: #1e465b;
+  }
+  
+  /* Labels and checkboxes */
+  .checkbox-form label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .checkbox-form input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+  
+  /* Button group for Select/Deselect */
+  .button-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Action buttons */
+  .action-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #1e465b;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background: #145064;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #33a7c4;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background: #2a90a6;
+  }
+  
+  /* Selected skills section */
+  .selected-skills {
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .selected-skills span {
+    font-weight: bold;
+    color: #1e465b;
+  }
+  
